@@ -51,6 +51,10 @@ PRODUCT_PACKAGES += \
     perf_profile.sh \
     swap_enable.sh \
     ktweak.sh 
+    
+# Recovery
+PRODUCT_PACKAGES += \
+    init.recovery.mt6765.rc
 
 # HIDL
 PRODUCT_PACKAGES += \
