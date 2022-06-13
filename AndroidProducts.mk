@@ -15,7 +15,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/lineage_RMX1941.mk
+	$(LOCAL_DIR)/lineage_OP4BFB.mk
 
 COMMON_LUNCH_CHOICES := \
-        lineage_RMX1941-userdebug
+        lineage_OP4BFB-userdebug

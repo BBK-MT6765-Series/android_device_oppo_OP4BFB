@@ -18,8 +18,8 @@
 
 set -e
 
-DEVICE=RMX1941
-VENDOR=realme
+DEVICE=OP4BFB
+VENDOR=oppo
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"

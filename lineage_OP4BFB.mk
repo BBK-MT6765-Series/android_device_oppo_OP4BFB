@@ -27,40 +27,29 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 # Inherit some common LineageOS stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Sakura flags
-SAKURA_OFFICIAL := true
-SAKURA_MAINTAINER := Anoosragh
-SAKURA_BUILD_TYPE := coregapps
-
-# Inherit from RMX1941 device makefile
-$(call inherit-product, device/realme/RMX1941/device.mk)
+# Inherit from OP4BFB device makefile
+$(call inherit-product, device/oppo/OP4BFB/device.mk)
 
 # Dimen
-TARGET_SCREEN_HEIGHT := 1560
+TARGET_SCREEN_HEIGHT := 1520
 TARGET_SCREEN_WIDTH := 720
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := RMX1941
-PRODUCT_NAME := lineage_RMX1941
-PRODUCT_BRAND := realme
-PRODUCT_MODEL := Realme C2
-PRODUCT_MANUFACTURER := realme
-PRODUCT_RELEASE_NAME := Realme C2
+PRODUCT_DEVICE := OP4BFB
+PRODUCT_NAME := lineage_OP4BFB
+PRODUCT_BRAND := OPPO
+PRODUCT_MODEL := CPH2083
+PRODUCT_MANUFACTURER := OPPO
+PRODUCT_RELEASE_NAME := OPPO A12
 
 TARGET_BOOT_ANIMATION_RES := 720
 
-# Build FP
-BUILD_FINGERPRINT := "google/coral/coral:11/RQ3A.210905.001/7511028:user/release-keys"
+# Fingerprint
+PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
-PRODUCT_BUILD_PROP_OVERRIDES := \
-    TARGET_DEVICE=RMX1941 \
-    PRODUCT_DEVICE=RMX1941 \
-    PRIVATE_BUILD_DESC="full_oppo6762-user 10 QP1A.190711.020 bedd37e98646d3a1 release-keys"
+TARGET_VENDOR_PRODUCT_NAME := CPH2083
 
-PRODUCT_GMS_CLIENTID_BASE := android-realme
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="CPH2083-user 9 PPR1.180610.011 1572000930 release-keys"
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.fingerprint=$(BUILD_FINGERPRINT)
-
-# FaceLock
-TARGET_FACE_UNLOCK_SUPPORTED := true
+BUILD_FINGERPRINT := OPPO/CPH2083/OP4BFB:9/PPR1.180610.011/1572000930:user/release-keys

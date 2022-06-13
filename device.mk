@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/realme/RMX1941
+DEVICE_PATH := device/oppo/OP4BFB
 
 # Installs gsi keys into ramdisk, to boot a GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
@@ -115,7 +115,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.RMX1941
+    android.hardware.light@2.0-service.OP4BFB
 
 # Telephony
 PRODUCT_BOOT_JARS += \
@@ -174,4 +174,7 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 -include $(DEVICE_PATH)/configs/mtk_services_log.mk
 
 # Inherit Device Vendor
-$(call inherit-product, vendor/realme/RMX1941/RMX1941-vendor.mk)
+#$(call inherit-product, vendor/realme/RMX1941/RMX1941-vendor.mk)
+
+# Inherit device vendor
+#$(call inherit-product, vendor/oppo/OP4BFB/OP4BFB-vendor.mk)
